@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: repeat(2,2fr);
+    width:100vw;
+    height: 80vh;
+}
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 80vh;
+    padding:2rem 3rem;
+    background: #000000;
+    color:#ffffff;
+}
+main .container header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#b2b2b2;
+    justify-content: space-between;
+    
+   
+
+}
+
+
+main .container header h2{
+    font-size:1.6rem;
+}
+
+main .container header .column{
+    display: flex;
+    align-items: center;
+}
+main .container header .column span{
+    font-weight: 500;
+    margin-right: 1rem;
+    font-size:1.19rem;
+}
+main .container header .column.volume-slider input{
+        accent-color: #fff;
+
+}
+main .container header .column.keys-check input{
+    width:60px;
+    height:30px;
+    appearance: none;
+    border-radius:30px;
+    background:#4b4b4b;
+    cursor:pointer;
+    position:relative;
+}
+
+main .container header .column.keys-check input::before{
+    content:"";
+    color:#ffffff;
+    height:20px;
+    width:20px;
+    background:#8c8c8c;
+    position: absolute;
+    top:50%;
+    left:0.3rem;
+    border-radius: inherit;
+    transform:translateY(-50%);
+    transition:all 0.3s ease;
+
+
+
+}
+
+main .container header .column.keys-check input:checked::before{
+    left:2.1rem;
+    background:#ffffff;
+}
+
+main ul.piano-keys{
+    display: flex;
+    margin-top:2rem;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+}
+
+main ul.piano-keys .key{
+    cursor:pointer;
+    list-style: none;
+    color:#a2a2a2;
+    user-select: none;
+    position:relative;
+    text-transform: uppercase;
+
+}
+main ul.piano-keys .key.white{
+    width:70px;
+    height:230px;
+    border:1px solid black;
+    background:linear-gradient(#fff 96% , #eeee 4%);
+    border-radius:8px;
+    z-index: 1;
+}
+main ul.piano-keys .key.white.active{
+   box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+   background:linear-gradient(to bottom, #fff 0% , #eeee 100%);
+
+}
+main ul.piano-keys .key.black{
+    width:44px;
+    height:140px;
+    z-index:2;
+    margin:0 -22px 0 -22px;
+    border:1px solid black;
+    background:linear-gradient(#333333 , #000000);
+    border-radius:0 0 5px 5px;
+}
+
+main ul.piano-keys .key.black.active{
+    box-shadow: inset -5px 5px 10px rgba(255,255,255,0.1);
+    background:linear-gradient(to bottom, #000 , #434343);
+ 
+ }
+
+main ul.piano-keys span{
+    position:absolute;
+    bottom:20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.13rem;
+}
+main ul.piano-keys .hide span{
+    display: none;
+}
+

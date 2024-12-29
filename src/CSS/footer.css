@@ -1,0 +1,16 @@
+footer{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,1fr);
+    width:100vw;
+    height:10vh;
+    align-content: center;
+    justify-items: center;
+}
+footer p {
+    color:#06b1cf;
+    font-weight: 900;
+    font-size:1.2rem;
+    padding:1rem;
+    text-align: center;
+}
