@@ -1,3 +1,3 @@
 #piano 
-##projeot dio com responsividade
+##projeto dio com responsividade
 
